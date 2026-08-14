@@ -115,7 +115,7 @@ The analysis then concentrates on the local disc, especially a **Solar annulus b
 
 The first diagnostic maps the median Galactocentric radial velocity of the quality-controlled Gaia stars across the local volume sampled by the catalogue.
 
-The figure should be interpreted as a **local kinematic map**, not as a map of the entire Galactic disc. The radial-velocity requirement and the quality cuts make the usable sample strongly concentrated around the Solar neighbourhood.
+The figure should be interpreted as a **local kinematic map**. The radial-velocity requirement and the quality cuts make the usable sample strongly concentrated around the Solar neighbourhood.
 
 The map shows that the local field is not perfectly axisymmetric: neighbouring regions contain systematically different median radial motions. Such coherent streaming is one of the observables that can carry information about non-axisymmetric perturbations such as spiral arms and the Galactic bar.
 
@@ -128,8 +128,6 @@ No attempt is made here to assign every feature in this map uniquely to spiral s
 The second diagnostic shows the local distribution in radial and prograde rotational velocity for stars close to the Galactic plane.
 
 The dominant population is centred close to the expected disc rotation speed and has a broad radial-velocity distribution around zero. The structure and width of this distribution provide a sanity check that the astrometric transformation is producing a physically plausible disc population.
-
-The plot is descriptive rather than a fit to a distribution-function model.
 
 ### 4.3 Radial velocity with azimuth
 
@@ -170,7 +168,7 @@ The current spiral is intentionally simple:
 
 Only the pattern speed is varied in the current experiment. Pitch angle, perturbation strength, phase and the axisymmetric background are held fixed.
 
-This is crucial when interpreting the result: a good match in pattern speed does **not** mean that the same pattern speed would remain preferred after the other spiral parameters, the bar, the stellar distribution function, observational errors and selection effects were allowed to vary.
+This is crucial. A good match in pattern speed does not mean that the same pattern speed would remain preferred after the other spiral parameters, the bar, the stellar distribution function, observational errors and selection effects were allowed to vary.
 
 ---
 
@@ -205,7 +203,7 @@ A two-armed spiral perturbation has an azimuthal symmetry that naturally motivat
 
 For both Gaia and the simulated stars, the code selects stars in the Solar annulus and in a comparable azimuthal wedge. It then measures the amplitude of the two-fold Fourier component of radial velocity.
 
-In plain language, this asks:
+More simply, this asks:
 
 > **How strongly does the radial-velocity field vary in a pattern with two maxima/minima around the Galactic disc?**
 
@@ -223,23 +221,13 @@ The simulated response changes strongly with the assumed spiral pattern speed.
 
 In the current run:
 
-- low pattern speeds around 8-12 km/s/kpc produce a much stronger radial response than observed;
-- the response falls rapidly as the pattern speed is increased;
-- the model sampled at **14 km/s/kpc** gives the closest amplitude to the Gaia value;
-- the response is not perfectly monotonic, with a secondary increase around 18 km/s/kpc; and
+- low pattern speeds around 8-12 km/s/kpc produce a much stronger radial response than observed
+- the response falls rapidly as the pattern speed is increased
+- the model sampled at **14 km/s/kpc** gives the closest amplitude to the Gaia value
+- the response is not perfectly monotonic, with a secondary increase around 18 km/s/kpc
 - the higher pattern-speed models generally produce a weaker response in this particular fixed-parameter experiment.
 
 The nearest sampled model therefore lies at approximately **14 km/s/kpc**.
-
-This should be read as:
-
-> *With the current fixed pitch angle, spiral strength, phase, background potential, initial conditions and comparison statistic, the model evaluated at 14 km/s/kpc produces the radial-response amplitude closest to that measured from the selected Gaia sample.*
-
-It should **not** be read as:
-
-> *The Milky Way spiral pattern speed has been measured to be 14 km/s/kpc.*
-
-That distinction is central to this project.
 
 ---
 
@@ -251,7 +239,7 @@ There is no single universally accepted Milky Way spiral pattern speed. Publishe
 
 **Vallée (2021)** inferred a density-wave pattern speed of roughly **12-17 km/s/kpc** from spatial offsets between different spiral-arm tracers. The approximate 14 km/s/kpc response match in this project falls inside that range.
 
-**Khalil et al. (2024, preprint)** used Gaia DR3 in-plane stellar motions to fit a global non-axisymmetric Galactic potential. Their fiducial solution contains a two-armed spiral mode with a pattern speed of **13.1 km/s/kpc** and a three-armed mode at **16.4 km/s/kpc**. The two-armed value is numerically close to the minimum-discrepancy model in the present experiment.
+**Khalil et al. (2024, preprint)** used Gaia DR3 in-plane stellar motions to fit a global non-axisymmetric Galactic potential. Their fiducial solution contains a two-armed spiral mode with a pattern speed of **13.1 km/s/kpc** and a three-armed mode at **16.4 km/s/kpc**. The two-armed value is numerically close to the minimum-discrepancy model in the present project.
 
 **Tang et al. (2026, preprint)** modelled spiral-arm streaming motions using APOGEE DR17 and Gaia DR3 and found that the observed kinematics constrain the spiral pattern speed to approximately **10-20 km/s/kpc**, while also showing that resonance structure strongly affects the radial-velocity response. The pattern-speed range explored here deliberately overlaps this regime.
 
@@ -265,8 +253,6 @@ Other methods favour appreciably higher values.
 
 **Bobylev & Bajkova (2023)** used young open clusters based on Gaia DR3 data and obtained values around **23-24 km/s/kpc** from two kinematic methods, with another birth-angle method giving approximately **29 km/s/kpc**.
 
-These results illustrate why the 14 km/s/kpc point from the present experiment cannot be treated as a definitive determination.
-
 ### Is a single pattern speed appropriate?
 
 An even more important issue is whether the Milky Way should be described by one rigidly rotating spiral pattern at all.
@@ -277,7 +263,7 @@ An even more important issue is whether the Milky Way should be described by one
 
 More recent Gaia DR3 work has also emphasised the interaction between bar and spiral structure. **Vislosky et al. (2024)** found that the morphology and radial-velocity field of Milky-Way-like simulations can vary strongly with time and that bar/spiral properties can be degenerate when matching Gaia DR3.
 
-Taken together, the literature comparison is therefore more interesting than simply asking whether `14 km/s/kpc` agrees with one published number. The broader conclusion is that **the inferred spiral dynamics depend on the physical model and on which parts of the stellar phase-space distribution are used**.
+Taken together, the literature comparison is therefore more interesting than simply asking whether `14 km/s/kpc` agrees with one published number. The broader conclusion is that the inferred spiral dynamics depend on the physical model and on which parts of the stellar phase-space distribution are used.
 
 That is also the main motivation for extending this exploratory project beyond a one-dimensional pattern-speed scan.
 
