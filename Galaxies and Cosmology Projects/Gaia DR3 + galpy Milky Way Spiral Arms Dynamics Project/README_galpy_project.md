@@ -271,9 +271,7 @@ That is also the main motivation for extending this exploratory project beyond a
 
 ## 9. Interpretation of the current result
 
-The main result of this project is not the number 14 km/s/kpc by itself.
-
-The more useful result is that, **even in a deliberately simple model**, changing only the rotation rate of the imposed spiral pattern produces a large and structured change in the local stellar radial-velocity response.
+Even in a deliberately simple model, changing only the rotation rate of the imposed spiral pattern produces a large and structured change in the local stellar radial-velocity response.
 
 This demonstrates three points:
 
@@ -282,8 +280,6 @@ This demonstrates three points:
 3. **One observable is not sufficient to determine those parameters uniquely.**
 
 For example, changing the spiral amplitude could raise or lower the radial-velocity response, while changing the pitch angle or phase could alter both its amplitude and spatial pattern. The Galactic bar can introduce additional non-axisymmetric streaming and resonances. A warmer and more realistic stellar population will also respond differently from the cold test-particle disc used here.
-
-The present exercise is therefore best regarded as a first step toward a higher-dimensional simulation-to-data inference problem.
 
 ---
 
@@ -313,8 +309,6 @@ The current model contains several deliberate simplifications.
 - Only a single finite integration time is considered.
 - No observational selection or measurement process is applied to the simulated catalogue before comparison.
 
-For these reasons, the pattern-speed scan is explicitly labelled **exploratory** throughout the code and figures.
-
 ---
 
 ## 11. Planned extensions
@@ -323,14 +317,14 @@ The natural next step is to replace the one-dimensional pattern-speed scan with 
 
 Planned extensions include:
 
-- varying **spiral pattern speed, pitch angle and perturbation strength simultaneously**;
-- varying the spiral phase;
-- adding a Galactic bar and varying its strength and pattern speed;
-- replacing the cold mock disc with a warmer, more realistic phase-space distribution;
-- increasing the number of simulated particles;
-- comparing spatially resolved radial-velocity maps rather than only a single two-fold amplitude;
-- forward-modelling observational uncertainties and Gaia selection effects;
-- studying parameter degeneracies;
+- varying **spiral pattern speed, pitch angle and perturbation strength simultaneously**
+- varying the spiral phase
+- adding a Galactic bar and varying its strength and pattern speed
+- replacing the cold mock disc with a warmer, more realistic phase-space distribution
+- increasing the number of simulated particles
+- comparing spatially resolved radial-velocity maps rather than only a single two-fold amplitude
+- forward-modelling observational uncertainties and Gaia selection effects
+- studying parameter degeneracies
 - constructing a likelihood-free or simulation-based inference pipeline that maps simulated observables to posterior constraints on Galactic parameters.
 
 A particularly important question is whether different combinations of pattern speed, pitch angle, spiral strength and bar parameters can produce similar local velocity signatures. Demonstrating such degeneracies would motivate the use of richer summary statistics or neural simulation-based inference.
@@ -363,7 +357,7 @@ pip install numpy pandas matplotlib astropy astroquery galpy
 Clone the repository and run:
 
 ```bash
-python gal-sim-fixed.py
+python gal-sim.py
 ```
 
 On the first run, the script queries Gaia DR3 and stores the selected catalogue locally as:
@@ -376,11 +370,11 @@ Subsequent runs load the cached file.
 
 The program then:
 
-1. transforms the Gaia catalogue to Galactocentric phase space;
-2. generates the three Gaia diagnostic figures;
-3. constructs the same mock stellar disc for every spiral pattern speed;
-4. integrates the orbits;
-5. generates the representative orbit figure; and
+1. transforms the Gaia catalogue to Galactocentric phase space
+2. generates the three Gaia diagnostic figures
+3. constructs the same mock stellar disc for every spiral pattern speed
+4. integrates the orbits
+5. generates the representative orbit figure
 6. calculates and plots the exploratory pattern-speed response scan.
 
 The Gaia TAP service can occasionally return server-side errors for large queries. If this happens, retrying later or using the cached local catalogue avoids rerunning the archive query.
@@ -399,32 +393,7 @@ figure4_simulated_orbits.png
 figure5_pattern_speed_scan.png
 ```
 
-Suggested repository structure:
-
-```text
-.
-├── README.md
-├── gal-sim-fixed.py
-├── figures/
-│   ├── figure1_gaia_vR_xy.png
-│   ├── figure2_gaia_velocity_distribution.png
-│   ├── figure3_gaia_azimuthal_vR.png
-│   ├── figure4_simulated_orbits.png
-│   └── figure5_pattern_speed_scan.png
-└── requirements.txt
-```
-
-If the figures are moved into a `figures/` directory, update the image paths in this README accordingly.
-
-The cached Gaia catalogue is better excluded from GitHub because it can be regenerated from the archive. For example, add:
-
-```text
-gaia_dr3_local_rvs.csv
-__pycache__/
-*.pyc
-```
-
-to `.gitignore`.
+The cached Gaia catalogue is better excluded from GitHub because it can be regenerated from the archive.
 
 ---
 
@@ -484,7 +453,3 @@ Physics and Astrophysics MPhys, University of Warwick
 Research interests: Galactic dynamics, numerical simulation, astronomical data analysis and simulation-based inference.
 
 ---
-
-### Note on interpretation
-
-This repository documents an ongoing independent research project. Numerical values in the exploratory comparison depend on the present model assumptions and should not be quoted as a precision constraint on Milky Way spiral structure without the additional modelling described above.
