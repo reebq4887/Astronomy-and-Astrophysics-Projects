@@ -350,10 +350,10 @@ def transform_gaia(df):
     # Distance
     # --------------------------------------------------------
     #
-    # Because the selected stars have parallax S/N > 10,
-    # inverse parallax is adequate for this quick project.
+    # Because the selected stars have parallax S/N > 5,
+    # inverse parallax is adequate for now.
     #
-    # This is NOT intended as a precision distance estimator.
+    # This is not intended as a precision distance estimator.
 
     distance = (
         1000.0 / df["parallax"].to_numpy()
