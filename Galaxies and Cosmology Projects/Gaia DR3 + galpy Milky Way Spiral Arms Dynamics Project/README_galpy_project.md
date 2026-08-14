@@ -1,9 +1,9 @@
-# Gaia DR3 Kinematics and Milky Way Spiral-Arm Dynamics
+# Gaia DR3 Kinematics and Milky Way Spiral-Structure Dynamics
 
 An independent computational Galactic-dynamics project combining **Gaia DR3 stellar kinematics** with **test-particle orbit integrations in `galpy`** to explore how the local stellar velocity field responds to a rotating spiral perturbation.
 
-> **Status:** ongoing exploratory research project.  
-> The present analysis is a deliberately simplified test-particle experiment and **is not a precision measurement of the Milky Way spiral pattern speed**.
+> **Status:** Continually improving this research project.  
+> The present analysis is a deliberately simplified test-particle experiment and is not a precision measurement of the Milky Way spiral pattern speed.
 
 ---
 
@@ -19,13 +19,13 @@ This project was developed as an independent exercise in Galactic dynamics, nume
 
 The project combines:
 
-1. a quality-controlled sample of real **Gaia DR3** stars with measured radial velocities;
-2. transformation of their astrometry into a Galactocentric phase-space representation;
-3. a simple Milky-Way-like gravitational potential with a rotating two-armed logarithmic spiral perturbation;
-4. test-particle orbit integrations for a grid of assumed spiral pattern speeds; and
-5. a common two-fold radial-velocity statistic used to compare the simulated response with the Gaia sample.
+1. a quality-controlled sample of **Gaia DR3** stars with measured radial velocities
+2. transformation of their astrometry into a Galactocentric phase-space representation
+3. a simple Milky-Way-like gravitational potential with a rotating two-armed logarithmic spiral perturbation
+4. test-particle orbit integrations for a grid of assumed spiral pattern speeds
+5. a common two-fold radial-velocity statistic used to compare the simulated response with the Gaia sample
 
-The goal is not to determine a final Milky Way parameter from one diagnostic, but to build and test the components of a simulation-to-data Galactic-dynamics pipeline.
+The goal is to build and test the components of a simulation-to-data Galactic-dynamics pipeline.
 
 ---
 
@@ -60,7 +60,7 @@ two-fold radial-velocity response
        exploratory comparison
 ```
 
-The current implementation is contained in `gal-sim-fixed.py`.
+The current implementation is contained in `gal-sim.py`.
 
 ---
 
