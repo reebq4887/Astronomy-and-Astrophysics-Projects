@@ -442,6 +442,8 @@ The cached Gaia catalogue is better excluded from GitHub because it can be regen
 - **Katz, D. et al. (2023)**, *Gaia Data Release 3: Properties and validation of the radial velocities*, A&A, 674, A5.  
   https://doi.org/10.1051/0004-6361/202244220
 
+- **ChatGPT**, For help with debugging parts of code and asking clarifying questions about published literature.
+  
 ---
 
 ## 16. Author
